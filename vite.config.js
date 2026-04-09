@@ -1,3 +1,5 @@
+// ARCHIVO PARA QUE VITE CUANDO CARGUE LA WEB SEPA QUE NO SOLO ESTA EL INDEX.HTML, SINO QUE TAMBIEN ESTAN LOS DEMASN HTML
+
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
