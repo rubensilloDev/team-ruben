@@ -1,19 +1,3 @@
-// Menú hamburgues para la versión móvil
-
-// Definimos una constante que será el menu hamburguesa y otra que sera el menu que se despliega con las paginas por las que se puede navegar
-const logoHamburguesa = document.querySelector('.svg-menu-hamburguesa')
-const menuDesplegado = document.querySelector('.menu-paginas')
-const logoHamburguesaCerrado = document.querySelector('.svg-menu-hamburguesa-cerrar')
-
-// aqui definimos que cuando se haga clicl pase lo que esta dentro
-logoHamburguesa.addEventListener('click', () => {
-    menuDesplegado.classList.toggle('menu-paginas-abierto') // le cambie la clase a "menu-paginas-abierto" y se pondra con los estilos dados en css
-    logoHamburguesaCerrado.classList.add('menu-hamburguesa-cerrado-aparecer')
-})
-
-
-
-
 // Validación del formulario y que me llegue a mi el cliente que ha puesto los datos y sus datos a mi telegram
 
 // 1. Seleccionar los elementos que necesito del HTML

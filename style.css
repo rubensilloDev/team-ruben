@@ -128,9 +128,7 @@ body {
     /* si hay algo que se se sale del ancho, se esconde (par que no haya problemas en movil) */
     color: white;
     /* Fondo de toda la pagina animado */
-    background-image: url(./img/andrew-kliatskyi-CTt4F-bGZ34-unsplash.jpg);
-    object-fit: cover;
-    position: relative;
+    background-color: black;
 }
 
 /* capa por encima del body negra transparente */
@@ -240,7 +238,7 @@ a {
     align-items: center;
     /* alineación vertical */
     backdrop-filter: blur(15px);
-    /* le damos el efecto borroso*/
+    /* efecto borroso*/
     border-radius: 0px 0 25px 25px;
     /* radio del borde de la esquina izq y derecha*/
     border-bottom: solid var(--acento-amarillo) 0.5px;
@@ -276,9 +274,9 @@ a {
 
 /* estilos al pasar el cursor al los elementos del menu */
 .menu ul li:hover {
-    transform: scale(1.2);
+    transform: scale(1.05) translateY(-3px);
     /* le hacemos que crezca */
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     /* la duración del transform*/
 }
 
@@ -382,15 +380,13 @@ a {
     transition: all 0.5s ease;
 }
 
-/* stilos al pasar el cursor por la imagen*/
+/* estilos al pasar el cursor por la imagen*/
 .hero img:hover {
     transform: scale(1.03);
 }
 
 
 /* SECTION 1 - Nuestro Método */
-
-/* Las tarjetas individuales t-1, t-2 etc siguen aquí pero sin transiciones duplicadas */
 
 /* tarjeta 1 */
 .t-1.oculto {
@@ -428,6 +424,21 @@ a {
     transform: translateX(0);
 }
 
+/* Animaciones de scroll de las tarjetas de la seccion 4 */
+/* Animación compartida para las 3 tarjetas de experiencia */
+.tarjeta-experiencia.oculto {
+    opacity: 0;
+    transform: translateY(-100px);
+    /* Viene desde arriba */
+}
+
+.tarjeta-experiencia.visible {
+    opacity: 1;
+    transform: translateY(0);
+    /* Llega a su posición original */
+}
+
+
 /* Estilos a la seccion 1 y 4*/
 .section1,
 .section4 {
@@ -450,7 +461,7 @@ a {
     margin: 5% auto;
 }
 
-/* Tarjetas generales */
+/* Estilos a las tarjetas de la seccion 1 y de la seccion 4 (mi experiencia) */
 .tarjeta,
 .tarjeta-experiencia {
     background-color: var(--color-fondo-hero);
@@ -466,19 +477,18 @@ a {
     gap: 18px;
     border-radius: 25px;
     transition: all 0.3s ease;
-    /* Tiempo para hover y salir */
 }
 
-/* Entrada por scroll (aquí mandan los 2 segundos porque está debajo) */
 .oculto {
     opacity: 0;
 }
 
 .visible {
     opacity: 1;
-    transition: opacity 0.3s ease, transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
+/* Estilos a los iconos de las tarjetas de la seccion 1 y de la seccion 4 (mi experiencia) */
 .tarjeta svg,
 .tarjeta-experiencia svg {
     fill: var(--acento-amarillo);
@@ -488,6 +498,8 @@ a {
     filter: drop-shadow(0 0 5px var(--acento-amarillo));
 }
 
+
+/* Estilos a los hovers de las tarjetas de la seccion 1 y 4 */
 .tarjeta:hover,
 .tarjeta-experiencia:hover {
     transition: all 0.3s ease;
@@ -537,7 +549,6 @@ a {
 }
 
 /* Estilos a Servicios */
-
 .tarjetas-servicios {
     max-width: 85%;
     margin: 2% auto;
@@ -1162,12 +1173,12 @@ a {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
 }
 
 /* estilos al pasar el cursor por el boton */
 #btn-arriba:hover {
-    transform: scale(1.1);
+    transform: scale(1.02) translateY(-5px);
 }
 
 /* estilos al boton cuando aparezca (clase puesta en js) */
@@ -1282,8 +1293,6 @@ footer a:hover {
 }
 
 
-
-
 /* Estilos al formulario */
 .container-formulario {
     background-color: var(--color-fondo-hero);
@@ -1293,6 +1302,33 @@ footer a:hover {
     transition: 0.5s all ease;
 }
 
+/* Animaciones de scroll a la página formulario */
+.img-formulario.oculto,
+.img-formulario.oculto {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.img-formulario.visible,
+.img-formulario.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.formulario.oculto,
+.formulario.oculto {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.formulario.visible,
+.formulario.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Estilos al formulario cuando se pasa el cursor por encima*/
 .container-formulario:hover {
     border: solid 2px var(--acento-amarillo);
     transition: 0.2s all ease-in;
@@ -1453,10 +1489,11 @@ footer a:hover {
     gap: 0;
 }
 
+
+/* Estilos a la sección de "asesoria" */
 .asesoria {
     margin: 3% auto;
     width: 90%;
-
 }
 
 .contenedor-titulo-servicios {
@@ -1491,6 +1528,32 @@ footer a:hover {
     gap: 30px;
 }
 
+/* animaciones de scroll a cada una de las tarjetas de la asesoria (.incluido-asesoria) */
+.incluido1.oculto,
+.incluido2.oculto,
+.incluido3.oculto {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.incluido4.oculto,
+.incluido5.oculto,
+.incluido6.oculto {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.incluido1.visible,
+.incluido2.visible,
+.incluido3.visible,
+.incluido4.visible,
+.incluido5.visible,
+.incluido6.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* estilos a las tarjetas */
 .incluido-asesoria {
     background-color: var(--color-fondo-hero);
     border-left: var(--acento-amarillo) 8px solid;
@@ -1499,6 +1562,11 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 0.5s all ease;
+}
+
+.incluido-asesoria:hover {
+    transform: translateY(-10px) scale(1.03);
 }
 
 .incluido-asesoria h4 {
@@ -1525,7 +1593,6 @@ footer a:hover {
 
 /* Estilos a los Cursos */
 
-/* estilos a las pestañas de los cursos */
 
 /* estilos al contenedor de las pestañas */
 .pestañas-cursos {
@@ -1591,7 +1658,6 @@ footer a:hover {
 }
 
 /* Estilo a la sección de los servicios de los cursos */
-
 /* estilos a seccion de los cursos */
 
 .servicio.cursos {
@@ -1607,6 +1673,8 @@ footer a:hover {
 
 /* estilos al contendor en que estan dentro todos los modulos de cada curso */
 .modulos {
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -1629,6 +1697,7 @@ footer a:hover {
 
 .modulo:hover {
     border: solid 2px var(--acento-amarillo);
+    transform: translateY(-5px);
     box-shadow: 0px 0px 15px 0px rgba(242, 255, 0, 0.3);
 }
 
@@ -2612,82 +2681,6 @@ footer a:hover {
 }
 
 
-
-
-
-/* ============================================
-   CORRECCIONES A APLICAR EN EL CSS
-   ============================================ */
-
-
-/* 1. QUITAR este bloque entero porque el display:flex no sirve de nada
-   ya que el display:none de abajo lo machaca */
-
-/* 
-.curso-perdidaGrasa,
-.curso-ganancia-de-masa-muscular,
-.curso-nutrición {
-    display: flex;   <-- QUITAR ESTE BLOQUE ENTERO
-    display: none;
+.terminado {
+    transition: 0.3s all ease;
 }
-*/
-
-
-/* 2. EN :root CORREGIR ESTO: */
-
-/* 
---color-menu: rgb(18, 18, 18, 0.5);   <-- MAL, rgb no acepta opacidad
---color-menu: rgba(18, 18, 18, 0.5);  <-- BIEN
-*/
-
-
-/* 3. EN EL RESPONSIVE, CAMBIAR background-color: 0 POR transparent EN ESTOS DOS SITIOS: */
-
-/*
-.menu-paginas-abierto ul li {
-    background-color: 0;          <-- MAL
-    background-color: transparent; <-- BIEN
-}
-*/
-
-
-/* 4. SACAR ESTO FUERA DE LOS @MEDIA (ponerlo en el CSS general antes del @media móvil)
-   porque es igual en móvil y tablet: */
-
-/*
-footer p {
-    text-align: center;
-    margin-top: 15%;
-}
-
-footer ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-*/
-
-
-/* 5. CAMBIAR TODOS LOS SELECTORES LARGOS DEL FORMULARIO POR LA CLASE .input-campos */
-
-/*
-EN VEZ DE:
-.container-formulario input, .container-formulario select, .container-formulario textarea ...
-
-PONER:
-.input-campos {
-    background-color: black;
-    width: 100%;
-    ...
-}
-*/
-
-
-/* 6. QUITAR LOS !important DE: */
-
-/*
-h1 { font-size: var(--texto-h1-movil) !important; }   <-- quitar !important
-h2 { font-size: var(--texto-h2-movil) !important; }   <-- quitar !important
-.contenedor-incluido-asesoria { width: 100% !important; } <-- quitar !important
-   y subir la especificidad del selector si hace falta
-*/

@@ -6,14 +6,14 @@ let contenidoPestañas = document.querySelectorAll('.curso-perdidaGrasa, .curso-
 
 // Como quiero que se muestre primero solo el primer boton (perdida de grasa), junto con su contenido.
 pestañas[0].classList.add('visible')
-contenidoPestañas[0].classList.add('visible') 
+contenidoPestañas[0].classList.add('visible')
 // hacemos que nada mas abrir la pagina se muestre, en este caso, el curso de perdida de grasa y sui contenido
 // y como el querySelectorAll devuelve como una lista, parecido a un array, con las clases que encuentre en el HTML, entonces podemos accder a sus indices
 
 
 // Definimos un eventLisener click oara que cuando haga click ejecute lo de dentro
-pestañas.forEach(function (pestaña){ // como es una lista, debemos poner el forEach para que se aplique a cada uno de esa lista
-    pestaña.addEventListener('click', function() {
+pestañas.forEach(function (pestaña) { // como es una lista, debemos poner el forEach para que se aplique a cada uno de esa lista
+    pestaña.addEventListener('click', function () {
 
         // primero borramos todos los activos que haya
         pestañas.forEach(function (cadaPestaña) {
