@@ -23,10 +23,12 @@ botonEnviarFormulario.addEventListener('click', function (e) {
     mensajeInfoFormulario.classList.remove("mostrado")
 
     // y aqui muestro mensajes si falta un campo u otro por rellenar
-    if (nombre === "" || email === "" || telefono.length < 9 || objetivo === "" || plan === "" || objetivo === "" || plan === "") { // /\D/ = cualquier carácter que no sea un digito
+    if (nombre === "" || email === "" || telefono.length < 9 || objetivo === "" || plan === "") { // /\D/ = cualquier carácter que no sea un digito
         mensajeInfoFormulario.textContent = "Rellena los campos obligatorios"
-    } else if (nombre === "" || /\d/.test(nombre) || nombre === "") {
+        // si esta todo rellenado, comprobamos si tienen numeros lps campos que no deben tenerlo
+    } else if (/\d/.test(nombre)) {
         mensajeInfoFormulario.textContent = "Nombre vacío o no válido"
+        // si no tienen ningun digito, comprobamos que el email tiene el @
     } else if (!email.includes('@')) {
         mensajeInfoFormulario.textContent = 'Email debe contener "@"'
 

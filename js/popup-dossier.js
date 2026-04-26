@@ -39,7 +39,7 @@ contenedorDossier.addEventListener('click', function (comprobarClic) {
 // Comprobar que al enviar el formulario ninguno de los campos esten vacios, y mostrar un mensaje u otro
 
 // Inicializamos el EmailJS con mi clave publica
-emailjs.init('adqVs0aXaar2DD7tk')
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
 
 botonEnviarDossier.addEventListener('click', function () {
 
@@ -56,7 +56,7 @@ botonEnviarDossier.addEventListener('click', function () {
     // Combinar esto con el EmailJS que es para que al usuario le pueda llegar el correo con el contenido que he definido en emailjs
 
     // comprobamos que ningun campo esta vacío
-    if (nombre === "" && apellidos === "" && email === "") {
+    if (nombre === "" || apellidos === "" || email === "") {
         mensajeErrorExito.textContent = 'Rellena los campos' // ponemos que el mensaje muestre un texto pq en el html no hemos pusto texto
         mensajeErrorExito.classList.add('error')
     }
@@ -80,6 +80,9 @@ botonEnviarDossier.addEventListener('click', function () {
         mensajeErrorExito.classList.remove('exito')
 
         // luego ponemos que si el boton (cursoActual) es perdida de grasa, ganancia de masa muscular o el curso de nutricion, pues cada uno tenga un enlace diferente para descargar el dossier del pdf
+
+        let enlacePdf = ""
+
         if (cursoActual === "perdida") {
             enlacePdf = "https://drive.google.com/file/d/12cryqMXcEbr76dxq4hvm8CuwWu7LgTnm/view?usp=sharing"
         } else if (cursoActual === "musculo") {

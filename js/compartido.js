@@ -38,15 +38,18 @@ if (btnSubir) {
 
 // ANIMACIONES AL HACER SCROLL
 // declaramos una constante que recoja todos los elementos con la clase .oculto del css
-let elemetosOcultos = document.querySelectorAll('.oculto')
+let elementosOcultos = document.querySelectorAll('.oculto')
 
-if (elemetosOcultos.length > 0) { // primero se comprueba si hay alguna elemento con .oculto (asi evitamos que si hay alguna pagina sin .oculto, de algun error)
+if (elementosOcultos.length > 0) { // primero se comprueba si hay alguna elemento con .oculto (asi evitamos que si hay alguna pagina sin .oculto, de algun error)
     // definimos una constante que va a ser una funcion que observe y si detecte algo, que ejecute lo de dentro de la función
     const observer = new IntersectionObserver(function (elementosDetectados) {
 
         elementosDetectados.forEach(elementoDetectadoIndividual => { // Y por cada elemento que detecte
             if (elementoDetectadoIndividual.isIntersecting) { // y si esta en la pantalla (isIntersecting)
                 elementoDetectadoIndividual.target.classList.add('visible') // se ejecuta esto, que es que se añade la clase 'visible'
+
+                // dejamos de observarlo cuando ya lo haya mostrado
+                observer.unobserve(elementoDetectadoIndividual.target)
 
                 // Ahora lo que hacemos es que cuando se le de la clase 'visible' espere 1 segundo y luego se le de la clase 'terminado' para que no se solapen el tiempo de la animacion de scroll con los de los hovers
                 setTimeout(() => {
@@ -57,7 +60,7 @@ if (elemetosOcultos.length > 0) { // primero se comprueba si hay alguna elemento
     })
 
     // hacemos que vigile los elementos de la lista definida aqui => let elemetosOcultos = document.querySelectorAll('.oculto')
-    elemetosOcultos.forEach(elementoOculto => { // por cada elemento de esta lista
+    elementosOcultos.forEach(elementoOculto => { // por cada elemento de esta lista
         observer.observe(elementoOculto) // le decimos al observer que vigile a cada elemento oculto par que se active luego el bloque anterior 
     })
 }
