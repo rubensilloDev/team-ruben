@@ -271,7 +271,6 @@ a {
 /* Estilos al la seccion hero*/
 .hero {
     margin: -10px;
-    background-color: #1e1e1e;
     background: linear-gradient(135deg, #1e1e1e 60%, black 100%);
     /* degradado que acaba abajo a la derecha */
     min-height: 100vh;
@@ -715,7 +714,6 @@ a {
     font-weight: bold;
     background-color: var(--acento-amarillo);
     border: 1px solid var(--acento-amarillo);
-    display: inline-block;
     padding: 8px 16px;
     border-radius: 20px;
     transition: 0.5s all ease;
@@ -916,7 +914,6 @@ a {
 .planes ul li {
     color: rgb(220, 220, 220);
     font-family: var(--fuente-textos);
-    font-size: var(--texto-p);
     margin: 15px auto;
 }
 
@@ -1116,7 +1113,6 @@ a {
     color: var(--acento-amarillo);
     font-size: 1rem;
     font-weight: bold;
-    animation: cta-animation 2s infinite;
     transition: 0.2s all linear;
 }
 
@@ -1276,28 +1272,24 @@ footer a:hover {
 }
 
 /* Animaciones de scroll a la página formulario */
-.img-formulario.oculto,
 .img-formulario.oculto {
     opacity: 0;
     transform: translateX(-100px);
 }
 
-.img-formulario.visible,
 .img-formulario.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-.formulario.oculto,
 .formulario.oculto {
     opacity: 0;
     transform: translateX(100px);
 }
 
-.formulario.visible,
 .formulario.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 
@@ -1600,7 +1592,7 @@ footer a:hover {
 
 .curso-perdidaGrasa.visible,
 .curso-ganancia-de-masa-muscular.visible,
-.curso-nutrición.visible {
+.curso-nutricion.visible {
     display: block;
     /* se ve cuando el js le ponga la clase .activo */
 }
@@ -1609,7 +1601,7 @@ footer a:hover {
 /* Estilos a los cursos */
 .curso-perdidaGrasa,
 .curso-ganancia-de-masa-muscular,
-.curso-nutrición {
+.curso-nutricion {
     display: none;
     padding: 3% 0;
     flex-direction: column;
@@ -1620,7 +1612,7 @@ footer a:hover {
 /* Estilos a los h3 de los 3 cursos*/
 .curso-perdidaGrasa h3,
 .curso-ganancia-de-masa-muscular h3,
-.curso-nutrición h3 {
+.curso-nutricion h3 {
     text-align: center;
     font-size: var(--texto-h2);
     margin-bottom: 2%;

@@ -13,132 +13,129 @@
 </head>
 
 <body>
-    <header class="header-formulario">
-        <header class="container-menu">
+    <header class="container-menu">
+        <nav class="menu">
 
-
-            <nav class="menu">
-
-                <!-- Icono del menú hamburguesa para la versión movil -->
-                <div id="menu-hamburguesa" class="svg-menu-hamburguesa">
-                    <div class="linea-menu"></div>
-                    <div class="linea-menu"></div>
-                </div>
-
-                <a href="#inicio"><img class="logo" src="./img/logo_proyecto_web.png" alt="Logo de la web"></a>
-                <div class="menu-paginas">
-                    <ul>
-                        <li><a href="./index.html" class="pag-inicio">Inicio</a></li>
-                        <li><a href="./servicios.html" class="pag-servicios">Servicios</a></li>
-                        <li class="boton-importante activo"><a href="./formulario.html" class="pag-formulario">Empieza
-                                Ya</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section class="hero-formulario">
-                <h3 class="encabezados">- Toma Acción -</h3>
-                <h1>Formulario</h1>
-                <h3>Rellena este formulario para poder trabajar 1:1 conmigo en marcha de tu cambio físico.</h3>
-                <p>*Tras rellenar el formulario y confirmar el pago correctamente, en las 24/48h siguientes se te
-                    informará
-                    a
-                    traves de WhatsApp para poder empezar con tu cambio físico*</p>
-            </section>
-            <div class="contenido-formulario">
-                <section>
-                    <div class="img-formulario oculto">
-                        <img src="./img/imagen-cambio-fisico-garantizado.png" alt="Coach viendo a su cliente posar.">
-                    </div>
-                </section>
-                <section class="formulario oculto">
-                    <div class="container-formulario">
-                        <p class="mensaje-info-formulario"><em>Los campos marcados con (*) deben de ser rellenados
-                                obligatoriamente.</em></p>
-                        <form id="miFormulario">
-                            <div class="campos">
-                                <label for="nombre-apellidos">Nombre y Apellidos*</label>
-                                <input class="input-campos input-requerido" type="text" id="nombre-apellidos"
-                                    placeholder="Nombre y Apellidos" required>
-                            </div>
-                            <div class="campos">
-                                <label for="email">Tu mejor Email*</label>
-                                <input class="campos input-requerido" type="email" id="email"
-                                    placeholder="ejemplo@gmail.com" required>
-                            </div>
-                            <div class="campos">
-                                <label for="telefono">Tu Número de Teléfono*</label>
-                                <input class="campos input-requerido" value="+34 " type="tel" id="telefono" required>
-                            </div>
-                            <div class="campos">
-                                <label for="objetivo-fisico">Objetivo Físico*</label>
-                                <select class="input-campos input-requerido" id="objetivo-fisico" required>
-                                    <option value="perder-grasa">Perder Grasa</option>
-                                    <option value="masa-muscular">Ganar Masa Muscular</option>
-                                    <option value="salud">Estar más Sano y mejorar mi composición corporal
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="campos">
-                                <label for="plan">Plan de Interés*</label>
-                                <select class="input-campos input-requerido" id="plan" required>
-                                    <option value="Mensual">Plan Mensual (40€)</option>
-                                    <option value="Trimestral">Plan Trimestral (99€)</option>
-                                    <option value="Anual">Plan Anual (340€)</option>
-                                </select>
-                            </div>
-                            <div class="campos">
-                                <label for="extras">Extras</label>
-                                <select class="input-campos" id="extras">
-                                    <option value="Sin Extras">Ninguno</option>
-                                    <option value="Curso Pérdida de Grasa">Curso de Pérdida de Grasa</option>
-                                    <option value="Curso-Ganancia de Masa Muscular">Curso de Ganancia de Masa Muscular
-                                    </option>
-                                    <option value="Curso Nutrición y Dietética">Curso de Nutrición y Dietética</option>
-                                </select>
-                            </div>
-                            <div class="campos">
-                                <label for="mensaje">Cuentame tu situación y contexto actual</label>
-                                <textarea class="input-campos" id="mensaje" rows="4"
-                                    placeholder="Cuéntame un poco sobre ti..."></textarea>
-                            </div>
-                            <span class="mensaje-formulario"></span>
-                            <div class="btn-formulario">
-                                <button class="btn-enviarFormulario" type="submit">ENVIAR FORMULARIO</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
+            <!-- Icono del menú hamburguesa para la versión movil -->
+            <div id="menu-hamburguesa" class="svg-menu-hamburguesa">
+                <div class="linea-menu"></div>
+                <div class="linea-menu"></div>
             </div>
-        </main>
 
-        <div class="btn-volverArriba">
-            <i id="btn-arriba" class="ri-arrow-up-s-line svg-volverArriba"></i>
-        </div>
-
-
-        <footer>
-            <p>© 2026 Team Rubén. Todos los derechos reservados.</p>
-            <div class=" legal">
+            <a href="#inicio"><img class="logo" src="./img/logo_proyecto_web.png" alt="Logo de la web"></a>
+            <div class="menu-paginas">
                 <ul>
-                    <li><a href="./aviso-legal.html" target="_blank">Aviso Legal</a></li>
-                    <li><a href="./politica-de-privacidad.html" target="_blank">Política de Privacidad</a>
-                    </li>
-                    <li><a href="./cookies.html" target="_blank">Política de Cookies</a></li>
-                    <li><a href="./terminos-y-condiciones.html" target="_blank">Términos y condiciones</a>
-                    </li>
+                    <li><a href="./index.html" class="pag-inicio">Inicio</a></li>
+                    <li><a href="./servicios.html" class="pag-servicios">Servicios</a></li>
+                    <li class="boton-importante activo"><a href="./formulario.html" class="pag-formulario">Empieza
+                            Ya</a></li>
                 </ul>
             </div>
-            <div class="rrss">
-                <a href=""><i class="ri-instagram-fill redes-sociales intagram"></i></a>
-                <a href=""><i class="ri-tiktok-fill redes-sociales tiktok"></i></a>
-                <a href=""><i class="ri-youtube-fill redes-sociales youtube"></i></a>
-            </div>
-        </footer>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-formulario">
+            <h3 class="encabezados">- Toma Acción -</h3>
+            <h1>Formulario</h1>
+            <h3>Rellena este formulario para poder trabajar 1:1 conmigo en marcha de tu cambio físico.</h3>
+            <p>*Tras rellenar el formulario y confirmar el pago correctamente, en las 24/48h siguientes se te
+                informará
+                a
+                traves de WhatsApp para poder empezar con tu cambio físico*</p>
+        </section>
+        <div class="contenido-formulario">
+            <section>
+                <div class="img-formulario oculto">
+                    <img src="./img/imagen-cambio-fisico-garantizado.png" alt="Coach viendo a su cliente posar.">
+                </div>
+            </section>
+            <section class="formulario oculto">
+                <div class="container-formulario">
+                    <p class="mensaje-info-formulario"><em>Los campos marcados con (*) deben de ser rellenados
+                            obligatoriamente.</em></p>
+                    <form id="miFormulario">
+                        <div class="campos">
+                            <label for="nombre-apellidos">Nombre y Apellidos*</label>
+                            <input class="input-campos input-requerido" type="text" id="nombre-apellidos"
+                                placeholder="Nombre y Apellidos" required>
+                        </div>
+                        <div class="campos">
+                            <label for="email">Tu mejor Email*</label>
+                            <input class="input-campos input-requerido" type="email" id="email"
+                                placeholder="ejemplo@gmail.com" required>
+                        </div>
+                        <div class="campos">
+                            <label for="telefono">Tu Número de Teléfono*</label>
+                            <input class="input-campos input-requerido" value="+34 " type="tel" id="telefono" required>
+                        </div>
+                        <div class="campos">
+                            <label for="objetivo-fisico">Objetivo Físico*</label>
+                            <select class="input-campos input-requerido" id="objetivo-fisico" required>
+                                <option value="perder-grasa">Perder Grasa</option>
+                                <option value="masa-muscular">Ganar Masa Muscular</option>
+                                <option value="salud">Estar más Sano y mejorar mi composición corporal
+                                </option>
+                            </select>
+                        </div>
+                        <div class="campos">
+                            <label for="plan">Plan de Interés*</label>
+                            <select class="input-campos input-requerido" id="plan" required>
+                                <option value="Mensual">Plan Mensual (40€)</option>
+                                <option value="Trimestral">Plan Trimestral (99€)</option>
+                                <option value="Anual">Plan Anual (340€)</option>
+                            </select>
+                        </div>
+                        <div class="campos">
+                            <label for="extras">Extras</label>
+                            <select class="input-campos" id="extras">
+                                <option value="Sin Extras">Ninguno</option>
+                                <option value="Curso Pérdida de Grasa">Curso de Pérdida de Grasa</option>
+                                <option value="Curso-Ganancia de Masa Muscular">Curso de Ganancia de Masa Muscular
+                                </option>
+                                <option value="Curso Nutrición y Dietética">Curso de Nutrición y Dietética</option>
+                            </select>
+                        </div>
+                        <div class="campos">
+                            <label for="mensaje">Cuentame tu situación y contexto actual</label>
+                            <textarea class="input-campos" id="mensaje" rows="4"
+                                placeholder="Cuéntame un poco sobre ti..."></textarea>
+                        </div>
+                        <span class="mensaje-formulario"></span>
+                        <div class="btn-formulario">
+                            <button class="btn-enviarFormulario" type="submit">ENVIAR FORMULARIO</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
 
-        <script type="module" src="./js/formulario.js"></script>
-        <script type="module" src="./js/compartido.js"></script>
+    <div class="btn-volverArriba">
+        <i id="btn-arriba" class="ri-arrow-up-s-line svg-volverArriba"></i>
+    </div>
+
+
+    <footer>
+        <p>© 2026 Team Rubén. Todos los derechos reservados.</p>
+        <div class="legal">
+            <ul>
+                <li><a href="./aviso-legal.html" target="_blank">Aviso Legal</a></li>
+                <li><a href="./politica-de-privacidad.html" target="_blank">Política de Privacidad</a>
+                </li>
+                <li><a href="./cookies.html" target="_blank">Política de Cookies</a></li>
+                <li><a href="./terminos-y-condiciones.html" target="_blank">Términos y condiciones</a>
+                </li>
+            </ul>
+        </div>
+        <div class="rrss">
+            <a href=""><i class="ri-instagram-fill redes-sociales intagram"></i></a>
+            <a href=""><i class="ri-tiktok-fill redes-sociales tiktok"></i></a>
+            <a href=""><i class="ri-youtube-fill redes-sociales youtube"></i></a>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/formulario.js"></script>
+    <script type="module" src="./js/compartido.js"></script>
 </body>
 
 </html>
