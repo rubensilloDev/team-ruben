@@ -66,7 +66,7 @@
 
     to {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
@@ -79,7 +79,7 @@
 
     to {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
@@ -121,13 +121,13 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Montserrat';
+    font-family: var(--fuente-titulos);
 }
 
 p,
 span,
 a {
-    font-family: 'Inter';
+    font-family: var(--fuente-textos);
 }
 
 /* estilos a todos los titulos de las secciones */
@@ -410,7 +410,6 @@ a {
 .section4 {
     margin-top: 2%;
     text-align: center;
-    height: auto;
 }
 
 .titulo-section1 {
@@ -831,12 +830,10 @@ a {
 .section5 {
     width: 100%;
     padding: 2% 0;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
 .titulo-section5 {
@@ -908,13 +905,14 @@ a {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    margin: 3% 0;
+    gap: 2rem;
 }
 
 .planes ul li {
-    color: rgb(220, 220, 220);
+    color: var(--color-texto-gris);
     font-family: var(--fuente-textos);
-    margin: 15px auto;
+    margin: 0 auto;
 }
 
 /*Estilos a los ticks de dentro de las tarjeta de "planes"*/
@@ -1638,7 +1636,6 @@ footer a:hover {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     gap: 50px;
 }
 
@@ -1680,14 +1677,10 @@ footer a:hover {
     margin-top: 3%;
     display: flex;
     justify-content: center;
-    align-content: center;
-    gap: 10px;
+    align-items: center;
 }
 
 .container-dossierCursos-pdf button {
-    display: flex;
-    justify-content: center;
-    align-content: center;
     background-color: var(--acento-amarillo);
     padding: 10px 20px;
     font-size: var(--texto-h3);
@@ -1696,7 +1689,7 @@ footer a:hover {
     border-radius: 20px;
     cursor: pointer;
     transition: 0.5s all ease;
-    color: black !important;
+    color: black;
 }
 
 .container-dossierCursos-pdf button:hover {
@@ -1704,17 +1697,10 @@ footer a:hover {
     box-shadow: 0px 0px 15px 0px rgba(242, 255, 0, 0.3);
 }
 
-.container-dossierCursos-pdf a {
-    color: black !important;
-
-}
-
 /* ESTILOS PARA EL POPUP PARA DESCARGAR EL GLOSSIER*/
 
 /* estilos al todo el popup*/
 .contenedor-dossier {
-    display: flex;
-
     /* para ponerlo al centro de la pantlla */
     align-items: center;
     justify-content: center;
@@ -2173,17 +2159,6 @@ footer a:hover {
         width: 100%;
     }
 
-    .img-cambiosFisicos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid var(--acento-amarillo);
-        border-radius: 20px;
-        background-color: var(--color-fondo-hero);
-        min-width: 100%;
-    }
-
     .img-cambiosFisicos img {
         background-color: var(--acento-amarillo);
         border-radius: 10px;
@@ -2203,7 +2178,6 @@ footer a:hover {
     }
 
     .container-experiencia {
-        height: auto;
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
@@ -2222,7 +2196,6 @@ footer a:hover {
     .section5 {
         margin: 0 auto;
         text-align: center;
-        height: auto;
     }
 
     .planes {
@@ -2625,8 +2598,7 @@ footer a:hover {
         overflow-x: hidden;
         margin: 0 auto;
         width: 100% !important;
-        grid-template-columns: 2fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
     }
 
     /* Estilos respondives al footer */
