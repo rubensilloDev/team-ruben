@@ -37,6 +37,7 @@ botonEnviarFormulario.addEventListener('click', function (e) {
         let texto = `🏋️‍♂️ NUEVO CLIENTE 🏋️‍♂️\n\n` + // "\n" seria un salto de linea y el + seria para "juntar" los distintos strings con las variables
             `👤 Nombre: ${nombre}\n` +
             `📧 Email: ${email}\n` +
+            `🎯 Objetivo: ${objetivo}\n` +
             `💎 Plan: ${plan}\n` +
             `💵 Extras: ${extras}\n` +
             `📞 Teléfono: ${telefono}\n` +
