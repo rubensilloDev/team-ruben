@@ -6,18 +6,17 @@ El objetivo principal es demostrar los conocimientos adquiridos en el diseño, m
 
 ---
 
-## ✨ Características Principales
+## Características Principales
 
 - **Diseño Responsive:** Adaptado a dispositivos móviles, tablets y ordenadores mediante media queries y Flexbox/CSS Grid.
 - **Catálogo de Servicios:** Detalle de asesorías 1 a 1 de entrenamiento físico y pautas nutricionales.
 - **Sección de Cursos:** Tarjetas informativas con los cursos online disponibles (temarios, duración, precios).
-- **Calculadora Interactiva de IMC / Calorías (JS):** Pequeña utilidad para que el cliente estime sus necesidades antes de contratar.
-- **Formulario de Contacto y Valoración Inicial:** Formulario interactivo con validaciones básicas en JavaScript para simular la recogida de datos y objetivos del cliente.
+- **Formulario de Contacto:** Formulario conectado con una API de telegram.
 - **Testimonios y Preguntas Frecuentes (FAQ):** Sección interactiva tipo acordeón para resolver dudas frecuentes.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **HTML5:** Marcado semántico para mejorar la accesibilidad y el SEO básico.
 - **CSS3:** Estilos personalizados, animaciones suaves, diseño adaptable mediante CSS Grid y Flexbox.
